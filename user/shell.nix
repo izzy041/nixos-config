@@ -4,6 +4,10 @@ let
     nrs = "sudo nixos-rebuild switch --flake ~/.dotfiles";
     hms = "home-manager switch --flake ~/.dotfiles";
     q = "exit";
+    gst = "git status";
+    gaa = "git add --all";
+    gcmsg = "git commit -m";
+    gpush = "git push";
   };
 in
 {
