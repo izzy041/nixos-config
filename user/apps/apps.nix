@@ -1,0 +1,10 @@
+{ pkgs, config, ... }:
+{
+  imports = [
+    ./firefox.nix
+    ./helix.nix
+    ./alacritty.nix
+    ./ghostty.nix
+    ./kitty.nix
+  ];
+}
