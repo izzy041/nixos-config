@@ -8,6 +8,7 @@ let
     gaa = "git add --all";
     gcmsg = "git commit -m";
     gpush = "git push";
+    gpull = "git pull";
   };
 in
 {
