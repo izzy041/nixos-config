@@ -1,7 +1,11 @@
 #!/usr/bin/env sh
 
 killall -q polybar
+killall -q .polybar-wrapper
 
-while pgrep -x polybar >/dev/null; do sleep 1; done
+while pgrep polybar >/dev/null; do sleep 1; done
 
-polybar top &
+# polybar dummy &
+polybar center &
+polybar left &
+polybar right &

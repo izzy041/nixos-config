@@ -30,7 +30,7 @@ in
       #   {
       #     triggers = [ "close" "hide" ];
       #     preset = "slide-out";
-      #     direction = "down"; 
+      #     direction = "down";
       #   }
       # ];
 

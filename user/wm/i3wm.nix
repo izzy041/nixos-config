@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 let
   text_colour = "#c0caf5";
   border_colour = "#f7768e";
@@ -17,11 +17,14 @@ in
       modifier = "Mod4";
       defaultWorkspace = "workspace number 1";
 
-      bars = [];
+      bars = [ ];
 
       startup = [
         { command = "xrandr --output Virtual-1 --mode 1920x1080"; }
-        { command = "feh --bg-fill ~/.dotfiles/user/wallpapers/wallpaper.png"; }
+        {
+          command = "feh --bg-fill ~/.dotfiles/user/wallpapers/wallpaper.png";
+          always = true;
+        }
         {
           command = "~/.dotfiles/user/wm/polybar.sh";
           always = true;
@@ -29,8 +32,9 @@ in
       ];
 
       gaps = {
-      	inner = 10;
-      	outer = 5;
+        top = 50;
+        inner = 10;
+        outer = 5;
       };
 
       fonts = {
