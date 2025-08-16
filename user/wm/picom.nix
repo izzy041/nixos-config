@@ -6,6 +6,8 @@ in
   services.picom = {
     enable = true;
 
+    backend = "glx";
+
     fade = true;
 
     inactiveOpacity = 0.9;
@@ -15,12 +17,12 @@ in
       rounded-corners-exclude = [
         "class_g = 'Polybar'"
       ];
-      # turn back on (laggy in vm)
-      # blur = {
-      #   method = "gaussian";
-      #   size = 10;
-      #   deviation = 5.0;
-      # };
+      
+      blur = {
+        method = "gaussian";
+        size = 10;
+        deviation = 5.0;
+      };
 
       fade-in-step = fade-step;
       fade-out-step = fade-step;

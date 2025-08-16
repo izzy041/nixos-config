@@ -19,6 +19,12 @@ in
 
       bars = [ ];
 
+      keycodebindings = {
+        "121" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle";
+        "122" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%";
+        "123" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%";
+      };
+
       startup = [
         { command = "xrandr --output Virtual-1 --mode 1920x1080"; }
         {

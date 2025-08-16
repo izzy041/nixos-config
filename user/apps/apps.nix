@@ -6,5 +6,6 @@
     ./alacritty.nix
     ./ghostty.nix
     ./kitty.nix
+    ./librewolf.nix
   ];
 }

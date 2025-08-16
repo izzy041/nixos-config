@@ -13,12 +13,8 @@
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-
-  # VMware
-  virtualisation.vmware.guest.enable = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   # Shells
   environment.shells = with pkgs; [ zsh bash];
@@ -26,7 +22,7 @@
   programs.zsh.enable = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -83,6 +79,7 @@
   wget
   git
   killall
+  pulseaudio
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

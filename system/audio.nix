@@ -18,5 +18,6 @@
      };
    };
   
+   services.actkbd.enable = true;
 }
 
