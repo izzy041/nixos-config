@@ -1,0 +1,27 @@
+{ pkgs, config, inputs, ... }:
+{
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
+  
+  programs.firefox = {
+
+    enable = true;
+
+    profiles.izzy = {
+      extensions = with inputs.nur.repos.rycee.firefox-addons.packages."x86_64-linux"; [
+        ublock-origin
+        sponsorblock
+        darkreader
+        youtube-shorts-block
+        proton-pass
+        # "7tv"
+        gruvbox-dark-theme
+        betterttv
+      ];
+    };
+  };
+}

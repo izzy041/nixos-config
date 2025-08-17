@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 {
   imports = [
@@ -22,6 +22,9 @@
       init.defaultBranch = "main";
     };
   };
+
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = _: true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -68,6 +71,7 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    # "/home/izzy/.mozilla/firefox/izzy/search.json.mozlz4".backupFileExtension = "hm_backup";
   };
 
   # Home Manager can also manage your environment variables through
@@ -91,5 +95,7 @@
   };
 
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs.home-manager = {
+    enable = true;
+  };
 }

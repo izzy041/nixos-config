@@ -22,7 +22,7 @@
   programs.zsh.enable = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -71,6 +71,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = _: true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -110,6 +111,5 @@
   system.stateVersion = "25.05"; # Did you read the comment?
   
   nix.settings.experimental-features = [ "nix-command" "flakes"];
-
 
 }

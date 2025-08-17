@@ -1,8 +1,8 @@
 { pkgs, config, ... }:
 {
-  programs.librewolf.enable = true;
-  
-  programs.librewolf = {
+  programs.firefox = {
+
+    enable = true;
 
     policies = {
       DefaultDownloadDirectory = "\${home}/Downloads";
