@@ -21,6 +21,9 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
+  # File Manager
+  programs.thunar.enable = true;
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -80,8 +83,15 @@
   wget
   git
   killall
+  unzip
+
   pulseaudio
   libva
+
+  libreoffice-qt
+  hunspell
+  hunspellDicts.en-gb-large
+  hunspellDicts.en-gb-ise
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

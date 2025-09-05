@@ -8,4 +8,6 @@
     ./kitty.nix
     ./librewolf.nix
   ];
+
+  programs.vesktop.enable = true;
 }

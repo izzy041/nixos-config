@@ -17,6 +17,7 @@
     settings = {
       window_padding_width = 20;
       placement_strategy = "top";
+      enable_audio_bell = false;
     };
 
     extraConfig = builtins.readFile ./tokyonight.conf;
