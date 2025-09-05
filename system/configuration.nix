@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./wm/i3wm.nix
       ./audio.nix
+      ./bluetooth.nix
     ];
 
   # Bootloader.
