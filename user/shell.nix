@@ -3,6 +3,7 @@ let
   aliases = {
     nrs = "sudo nixos-rebuild switch --flake ~/.dotfiles";
     hms = "home-manager switch --flake ~/.dotfiles";
+    hmsf = "rm ~/.mozilla/firefox/izzy/search.json.mozlz4 && home-manager switch --flake ~/.dotfiles";
 
     q = "exit";
 
