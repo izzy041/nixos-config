@@ -11,13 +11,11 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       home-manager,
       ...
     }@inputs:
     let
-      inherit (self) outputs;
       system = "x86_64-linux";
       # pkgs = nixpkgs.legacyPackages.${system};
       pkgs = import nixpkgs {
@@ -25,7 +23,6 @@
         overlays = [
           inputs.nur.overlays.default
         ];
-        config.allowUnfree = true;
       };
     in
     {

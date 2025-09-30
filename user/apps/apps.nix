@@ -11,5 +11,7 @@
   ];
 
   programs.vesktop.enable = true;
+  programs.obsidian.enable = true;
+
   services.flameshot.enable = true;
 }
